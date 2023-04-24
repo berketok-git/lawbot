@@ -121,7 +121,7 @@ export default function Home() {
       <Authenticator variation="modal" hideSignUp={true}>
         {({ signOut, user }) => (
           <div className="mx-auto flex flex-col gap-4">
-            <button onClick={signOut}>Sign out</button>
+            
             <div className="mx-auto flex flex-col gap-4">
               <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
                 Hukuki Danışman
@@ -229,6 +229,7 @@ export default function Home() {
                 )}
               </main>
             </div>
+            <button onClick={signOut}>Sign out</button>
             <footer className="m-auto p-4">
               Knowledge base for Turkish Law
             </footer>
