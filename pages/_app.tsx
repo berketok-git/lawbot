@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
 import "@aws-amplify/ui-react/styles.css";
 import { Amplify } from "aws-amplify";
-import awsExports from "../src/aws-exports";
+import awsExports from "../src/aws";
 
 Amplify.configure({ ...awsExports, ssr: true });
 
