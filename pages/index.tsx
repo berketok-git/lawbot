@@ -1,12 +1,10 @@
 import { useRef, useState, useEffect } from 'react';
-import Layout from '@/components/layout';
 import styles from '@/styles/Home.module.css';
 import { Message } from '@/types/chat';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import LoadingDots from '@/components/ui/LoadingDots';
 import { Document } from 'langchain/document';
-import { Authenticator } from '@aws-amplify/ui-react';
 
 export default function Home() {
   const [query, setQuery] = useState<string>('');
@@ -118,8 +116,8 @@ export default function Home() {
 
   return (
     <>
-      <Authenticator variation="modal" hideSignUp={true}>
-        {({ signOut, user }) => (
+      
+
           <div className="mx-auto flex flex-col gap-4">
             
             <div className="mx-auto flex flex-col gap-4">
@@ -229,13 +227,10 @@ export default function Home() {
                 )}
               </main>
             </div>
-            <button onClick={signOut}>Sign out</button>
             <footer className="m-auto p-4">
               Knowledge base for Turkish Law
             </footer>
           </div>
-        )}
-      </Authenticator>
     </>
   );
 }
