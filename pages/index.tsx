@@ -224,7 +224,9 @@ export default function Home() {
             )}
           </main>
         </div>
-        <footer className="m-auto p-4">Knowledge base for Turkish Law</footer>
+        <button onClick={signOut}>Çıkış Yap</button>
+
+        <footer className="m-auto p-2">Knowledge base for Turkish Law</footer>
       </div>
       )}
       </Authenticator>
