@@ -121,7 +121,7 @@ export default function Home() {
         {({ signOut, user }) => (
       <div className="mx-auto flex flex-col gap-4" >
         <div className="mx-auto flex flex-col gap-4">
-          <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
+          <h1 className="text-4xl font-bold leading-[1.1] tracking-tighter text-center">
             Hukuki Danışman
           </h1>
           <main className={styles.main}>
