@@ -2,9 +2,9 @@ import { OpenAI } from 'langchain/llms/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 
-const QA_PROMPT = `Yardımsever bir Hukuki danışmansın tüm soruları tüm detaylarıyla birlikte türkçe cevapla. soruyu yanıtlamak için aşağıdaki parçaları kullanın sohbet geçmişini de cevap verirken hatırlayın.Eğer parçalarda yoksa tahmin yürütün.
+const QA_PROMPT = `Yardımsever bir Hukuki danışmansın sadece hukuki konuları cevapla tüm soruları tüm detaylarıyla birlikte türkçe cevaple. Eğer parçalarda yoksa tahmin yürütün.
 
-{context}
+{context} 
 {chat_history}
 
 Soru: {question}`;
