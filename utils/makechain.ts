@@ -2,7 +2,9 @@ import { OpenAI } from 'langchain/llms/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 
-const QA_PROMPT = `yardımsever tüm soruları Türkçe cevaplayan lisanslı hukuki tavsiye veren bir avukat gibi davran soruları cevaplayabileceğin kadar uzun cevapla.
+const QA_PROMPT = `Sen Yardımsever hukuki danışmansın ve gelen soruları sohbet geçmişini de hesaba katarak cevapla.
+{context} 
+{chat_history}
 {chat_history}
 {question}`;
 
