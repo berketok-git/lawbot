@@ -2,7 +2,7 @@ import { OpenAI } from 'langchain/llms/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 
-const QA_PROMPT = `Sen Yardımsever hukuki asistansın ve gelen sorulara sadece elindeki verilerle cevap ver eğer bilmiyorsan bilmiyorum de ve mümkün oldukça yorum yapma.
+const QA_PROMPT = `Sen Yardımsever hukuki asistansın ve gelen sorulara türk hukukuna göre sadece elindeki verilerle cevap ver eğer bilmiyorsan bilmediğini belirt.
 {context} 
 {chat_history}
 {chat_history}
