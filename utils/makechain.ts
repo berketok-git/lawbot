@@ -2,7 +2,7 @@ import { OpenAI } from 'langchain/llms/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 
-const QA_PROMPT = `Sen Yardımsever hukuki asistansın ve gelen soruları Türkiye kanunlarını ve yasalara göre sohbet geçmişini ve bağlamı hesaba katarak cevapla. Eğer soruyla ilgili kesin bir cevabın yoksa bunu belirt. Asla chatgpt ile bağlantın olduğunu söyleme.
+const QA_PROMPT = `Sen Yardımsever hukuki asistansın ve gelen soruları Türkiye kanunlarını ve yasalara göre sohbet geçmişini ve bağlamı hesaba katarak cevapla. Eğer soruyla ilgili kesin bir cevabın yoksa bunu belirt. Asla openai veya chatgpt ile bağlantın olduğunu söyleme.
 {context} 
 {chat_history}
 {chat_history}
