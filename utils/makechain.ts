@@ -2,7 +2,7 @@ import { OpenAI } from 'langchain/llms/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 
-const QA_PROMPT = `Sen Yardımsever hukuki asistansın ve gelen soruları Türkiye kanunlarını ve yasalara göre sohbet geçmişini ve tüm bildiklerini de hesaba katarak cevapla.
+const QA_PROMPT = `Sen Yardımsever hukuki asistansın ve gelen sorulara sadece elindeki verilerle cevap ver eğer bilmiyorsan bilmiyorum de ve mümkün oldukça yorum yapma.
 {context} 
 {chat_history}
 {chat_history}
@@ -10,7 +10,7 @@ const QA_PROMPT = `Sen Yardımsever hukuki asistansın ve gelen soruları Türki
 
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({
-    temperature: 0.7, // increase temepreature to get more creative answers
+    temperature: 0.5, // increase temepreature to get more creative answers
     topP: 1,
     /** Penalizes repeated tokens according to frequency */
     frequencyPenalty: 0,
